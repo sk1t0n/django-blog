@@ -1,0 +1,121 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-01 12:49+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: blog/models.py:14 blog/models.py:98
+msgid "name"
+msgstr "имя"
+
+#: blog/models.py:18 blog/models.py:38
+msgid "slug"
+msgstr "слаг"
+
+#: blog/models.py:18 blog/models.py:38
+msgid "slug_help_text"
+msgstr "Часть URL-адреса, которая содержит заголовок страницы"
+
+#: blog/models.py:22
+msgid "parent"
+msgstr "родитель"
+
+#: blog/models.py:30 blog/models.py:72
+msgid "category"
+msgstr "категория"
+
+#: blog/models.py:31
+msgid "categories"
+msgstr "категории"
+
+#: blog/models.py:35
+msgid "title"
+msgstr "заголовок"
+
+#: blog/models.py:40
+msgid "content"
+msgstr "содержание"
+
+#: blog/models.py:43
+msgid "excerpt"
+msgstr "краткое содержание"
+
+#: blog/models.py:43
+msgid "excerpt_help_text"
+msgstr "Краткое содержание более длинной статьи"
+
+#: blog/models.py:46
+msgid "number_of_views"
+msgstr "количество просмотров"
+
+#: blog/models.py:49
+msgid "read_time"
+msgstr "время чтения"
+
+#: blog/models.py:52
+msgid "created_date"
+msgstr "дата создания"
+
+#: blog/models.py:55
+msgid "published"
+msgstr "опубликовано"
+
+#: blog/models.py:58
+msgid "published_date"
+msgstr "дата публикации"
+
+#: blog/models.py:61
+msgid "modified_date"
+msgstr "дата изменения"
+
+#: blog/models.py:65
+msgid "image"
+msgstr "изображение"
+
+#: blog/models.py:68
+msgid "author"
+msgstr "автор"
+
+#: blog/models.py:75 blog/models.py:107
+msgid "tags"
+msgstr "тэги"
+
+#: blog/models.py:83
+msgid "post"
+msgstr "статья"
+
+#: blog/models.py:84
+msgid "posts"
+msgstr "статьи"
+
+#: blog/models.py:106
+msgid "tag"
+msgstr "тэг"
+
+#: setup_admin_tools/menu.py:28
+msgid "Dashboard"
+msgstr "Дашборд"
+
+#: setup_admin_tools/menu.py:30
+msgid "Applications"
+msgstr "Приложения"
+
+#: setup_admin_tools/menu.py:34
+msgid "Administration"
+msgstr "Администрирование"

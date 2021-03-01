@@ -1,0 +1,119 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-01 12:49+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: blog/models.py:14 blog/models.py:98
+msgid "name"
+msgstr "name"
+
+#: blog/models.py:18 blog/models.py:38
+msgid "slug"
+msgstr "slug"
+
+#: blog/models.py:18 blog/models.py:38
+msgid "slug_help_text"
+msgstr "A slug is a piece of URL that contains page’s or post’s name"
+
+#: blog/models.py:22
+msgid "parent"
+msgstr "parent"
+
+#: blog/models.py:30 blog/models.py:72
+msgid "category"
+msgstr "category"
+
+#: blog/models.py:31
+msgid "categories"
+msgstr "categories"
+
+#: blog/models.py:35
+msgid "title"
+msgstr "title"
+
+#: blog/models.py:40
+msgid "content"
+msgstr "content"
+
+#: blog/models.py:43
+msgid "excerpt"
+msgstr "excerpt"
+
+#: blog/models.py:43
+msgid "excerpt_help_text"
+msgstr "A excerpt is a summary of a longer post"
+
+#: blog/models.py:46
+msgid "number_of_views"
+msgstr "number of views"
+
+#: blog/models.py:49
+msgid "read_time"
+msgstr "reading time"
+
+#: blog/models.py:52
+msgid "created_date"
+msgstr "created date"
+
+#: blog/models.py:55
+msgid "published"
+msgstr "published"
+
+#: blog/models.py:58
+msgid "published_date"
+msgstr "published date"
+
+#: blog/models.py:61
+msgid "modified_date"
+msgstr "modified date"
+
+#: blog/models.py:65
+msgid "image"
+msgstr "image"
+
+#: blog/models.py:68
+msgid "author"
+msgstr "author"
+
+#: blog/models.py:75 blog/models.py:107
+msgid "tags"
+msgstr "tags"
+
+#: blog/models.py:83
+msgid "post"
+msgstr "post"
+
+#: blog/models.py:84
+msgid "posts"
+msgstr "posts"
+
+#: blog/models.py:106
+msgid "tag"
+msgstr "tag"
+
+#: setup_admin_tools/menu.py:28
+msgid "Dashboard"
+msgstr "Dashboard"
+
+#: setup_admin_tools/menu.py:30
+msgid "Applications"
+msgstr "Applications"
+
+#: setup_admin_tools/menu.py:34
+msgid "Administration"
+msgstr "Administration"

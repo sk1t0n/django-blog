@@ -14,27 +14,10 @@ import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'ct1ec8j*ii0qz%48ff@cn7x&sb534_6^w45eew8zu5wi!s)o73'
-
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-
-ALLOWED_HOSTS = []
-
-
-# django-admin-tools
-ADMIN_TOOLS_MENU = 'setup_admin_tools.menu.CustomMenu'
+BASE_DIR = Path(__file__).resolve().parent.parent.parent
 
 
 # Application definition
-
 
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
@@ -52,12 +35,6 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'cloudinary',
 ]
-
-if DEBUG:
-    INSTALLED_APPS.insert(0, 'whitenoise.runserver_nostatic')
-    INTERNAL_IPS = [
-        '127.0.0.1',
-    ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -97,17 +74,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'django_blog.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/3.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
 
@@ -132,9 +98,9 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LOCALE_PATHS = [BASE_DIR / 'locale']
 
-LANGUAGE_CODE = 'ru'
+LANGUAGE_CODE = os.environ['LANGUAGE']
 
-TIME_ZONE = 'Europe/Moscow'
+TIME_ZONE = os.environ['TIME_ZONE']
 
 USE_I18N = True
 
@@ -159,3 +125,7 @@ CLOUDINARY_STORAGE = {
     'API_KEY': os.environ['CLOUDINARY_API_KEY'],
     'API_SECRET': os.environ['CLOUDINARY_API_SECRET']
 }
+
+
+# django-admin-tools
+ADMIN_TOOLS_MENU = 'setup_admin_tools.menu.CustomMenu'

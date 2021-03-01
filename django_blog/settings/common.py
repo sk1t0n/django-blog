@@ -115,6 +115,9 @@ USE_TZ = True
 # Heroku
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
+STATICFILES_DIRS = [
+    BASE_DIR / 'setup_admin_tools',
+]
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Cloudinary
@@ -129,3 +132,4 @@ CLOUDINARY_STORAGE = {
 
 # django-admin-tools
 ADMIN_TOOLS_MENU = 'setup_admin_tools.menu.CustomMenu'
+ADMIN_TOOLS_THEMING_CSS = 'css/admin_theming.css'

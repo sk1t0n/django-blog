@@ -29,6 +29,10 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# django-admin-tools
+ADMIN_TOOLS_MENU = 'setup_admin_tools.menu.CustomMenu'
+
+
 # Application definition
 
 

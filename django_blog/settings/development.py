@@ -1,6 +1,6 @@
 from .common import *  # noqa
 
-INSTALLED_APPS.insert(0, 'whitenoise.runserver_nostatic')  # noqa
+INSTALLED_APPS.insert(1, 'whitenoise.runserver_nostatic')  # noqa
 
 SECRET_KEY = 'dev_key'
 
@@ -20,3 +20,6 @@ DATABASES = {
         'NAME': BASE_DIR / 'db.sqlite3',  # noqa
     }
 }
+
+# WhiteNoise
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'

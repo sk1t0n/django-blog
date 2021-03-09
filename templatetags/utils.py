@@ -1,4 +1,5 @@
 from django import template
+from django.utils import timezone
 from django.utils.functional import lazy
 
 register = template.Library()
@@ -13,3 +14,8 @@ def ru_accusative_case(value: lazy) -> str:
     elif word == 'категория':
         return 'категорию'
     return word
+
+
+@register.simple_tag
+def current_year():
+    return timezone.localdate().year

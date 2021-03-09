@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+{% load i18n static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% translate 'site_title' %}{% endblock %}</title>
+    <meta name="description" content="{% translate 'site_description' %}">
+    <meta name="keywords" content="{% translate 'site_keywords' %}">
+    <meta name="author" content="{% translate 'site_author' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.1.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'app.css' %}">
+  </head>
+  <body>
+    {% include 'includes/header.html' %}
+
+    <main class="container">
+      <div class="columns is-multiline">
+        <div class="column is-9-desktop is-12-touch">
+          {% block content %}{% endblock %}
+        </div>
+        <aside class="column is-3-desktop is-12-touch">
+          {% include 'includes/sidebar.html' %}
+        </aside>
+      </div>
+    </main>
+
+    {% include 'includes/footer.html' %}
+
+    <script src="{% static 'app.js' %}"></script>
+  </body>
+</html>

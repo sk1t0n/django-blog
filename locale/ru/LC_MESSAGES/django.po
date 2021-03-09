@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-01 13:52+0300\n"
+"POT-Creation-Date: 2021-03-08 17:40+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,21 +20,22 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: blog/admin.py:19 blog/admin.py:39
+#: blog/admin.py:41 blog/admin.py:72
 msgid "admin_main_fields"
 msgstr "Основные поля"
 
-#: blog/admin.py:24 blog/admin.py:40
+#: blog/admin.py:46 blog/admin.py:73
 msgid "admin_additional_fields"
 msgstr "Дополнительные поля"
 
-#: blog/admin.py:51
-msgid "admin_site_title"
-msgstr "Django Blog"
+#: blog/admin.py:95 templates/base.html:8 templates/includes/footer.html:17
+#: templates/includes/header.html:6
+msgid "site_title"
+msgstr "Блог Антона Грабовского"
 
-#: blog/admin.py:52
+#: blog/admin.py:96
 msgid "admin_site_header"
-msgstr "Django Blog"
+msgstr "Блог Антона Грабовского"
 
 #: blog/apps.py:7
 msgid "blog"
@@ -112,7 +113,7 @@ msgstr "изображение"
 msgid "author"
 msgstr "автор"
 
-#: blog/models.py:75 blog/models.py:107
+#: blog/models.py:75 blog/models.py:107 templates/includes/footer.html:10
 msgid "tags"
 msgstr "тэги"
 
@@ -128,14 +129,52 @@ msgstr "статьи"
 msgid "tag"
 msgstr "тэг"
 
-#: setup_admin_tools/menu.py:28
+#: django_blog/menu_admin_tools.py:28
 msgid "Dashboard"
 msgstr "Дашборд"
 
-#: setup_admin_tools/menu.py:30
+#: django_blog/menu_admin_tools.py:30
 msgid "Applications"
 msgstr "Приложения"
 
-#: setup_admin_tools/menu.py:34
+#: django_blog/menu_admin_tools.py:34
 msgid "Administration"
 msgstr "Администрирование"
+
+#: templates/admin/change_list_object_tools.html:9
+#: templates/admin/change_list_object_tools.html:11
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: templates/base.html:9
+msgid "site_description"
+msgstr "Блог Антона Грабовского"
+
+#: templates/base.html:10
+msgid "site_keywords"
+msgstr "блог, Антон, Грабовский"
+
+#: templates/base.html:11
+msgid "site_author"
+msgstr "Антон Грабовский"
+
+#: templates/includes/footer.html:7
+msgid "recent_posts"
+msgstr "Последние статьи"
+
+#: templates/includes/footer.html:13
+msgid "contact_me"
+msgstr "Мои контакты"
+
+#: templates/includes/footer.html:17
+msgid "footer_copyright"
+msgstr "Все права защищены"
+
+#: templates/includes/header.html:17
+msgid "nav_home"
+msgstr "Главная"
+
+#: templates/includes/header.html:18
+msgid "nav_about"
+msgstr "Обо мне"

@@ -1,0 +1,22 @@
+{% load i18n %}
+
+<header class="header">
+  <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="navbar-brand">
+      <a class="navbar-item logo" href="/"><div>{% translate 'site_title' %}</div></a>
+
+      <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbarMenu">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
+    </div>
+
+    <div id="navbarMenu" class="navbar-menu">
+      <div class="navbar-start">
+        <a href="/" class="navbar-item">{% translate 'nav_home' %}</a>
+        <a href="https://grabovsky.surge.sh" class="navbar-item">{% translate 'nav_about' %}</a>
+      </div>
+    </div>
+  </nav>
+</header>

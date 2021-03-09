@@ -1,0 +1,18 @@
+main {
+  .columns {
+    margin-top: 0px;
+    margin-bottom: 0px !important;
+
+    .column:first-child {
+      padding-top: 0px;
+
+      article.post {
+        margin-bottom: 20px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
+    }
+  }
+}

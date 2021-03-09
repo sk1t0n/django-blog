@@ -92,7 +92,7 @@ class TagAdmin(admin.ModelAdmin):
     list_display_links = ['name']
 
 
-admin.site.site_title = _('admin_site_title')
+admin.site.site_title = _('site_title')
 admin.site.site_header = _('admin_site_header')
 
 admin.site.register(Post, PostAdmin)

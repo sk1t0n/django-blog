@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-01 13:52+0300\n"
+"POT-Creation-Date: 2021-03-08 17:40+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,21 +18,22 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: blog/admin.py:19 blog/admin.py:39
+#: blog/admin.py:41 blog/admin.py:72
 msgid "admin_main_fields"
 msgstr "Main fields"
 
-#: blog/admin.py:24 blog/admin.py:40
+#: blog/admin.py:46 blog/admin.py:73
 msgid "admin_additional_fields"
 msgstr "Additional fields"
 
-#: blog/admin.py:51
-msgid "admin_site_title"
-msgstr "Django Blog"
+#: blog/admin.py:95 templates/base.html:8 templates/includes/footer.html:17
+#: templates/includes/header.html:6
+msgid "site_title"
+msgstr "Anton Grabovsky Blog"
 
-#: blog/admin.py:52
+#: blog/admin.py:96
 msgid "admin_site_header"
-msgstr "Django Blog"
+msgstr "Anton Grabovsky Blog"
 
 #: blog/apps.py:7
 msgid "blog"
@@ -110,7 +111,7 @@ msgstr "image"
 msgid "author"
 msgstr "author"
 
-#: blog/models.py:75 blog/models.py:107
+#: blog/models.py:75 blog/models.py:107 templates/includes/footer.html:10
 msgid "tags"
 msgstr "tags"
 
@@ -126,14 +127,52 @@ msgstr "posts"
 msgid "tag"
 msgstr "tag"
 
-#: setup_admin_tools/menu.py:28
+#: django_blog/menu_admin_tools.py:28
 msgid "Dashboard"
 msgstr "Dashboard"
 
-#: setup_admin_tools/menu.py:30
+#: django_blog/menu_admin_tools.py:30
 msgid "Applications"
 msgstr "Applications"
 
-#: setup_admin_tools/menu.py:34
+#: django_blog/menu_admin_tools.py:34
 msgid "Administration"
 msgstr "Administration"
+
+#: templates/admin/change_list_object_tools.html:9
+#: templates/admin/change_list_object_tools.html:11
+#, python-format
+msgid "Add %(name)s"
+msgstr ""
+
+#: templates/base.html:9
+msgid "site_description"
+msgstr "Anton Grabovsky Blog"
+
+#: templates/base.html:10
+msgid "site_keywords"
+msgstr "blog, Anton, Grabovsky"
+
+#: templates/base.html:11
+msgid "site_author"
+msgstr "Anton Grabovsky"
+
+#: templates/includes/footer.html:7
+msgid "recent_posts"
+msgstr "Recent Posts"
+
+#: templates/includes/footer.html:13
+msgid "contact_me"
+msgstr "Contact Me"
+
+#: templates/includes/footer.html:17
+msgid "footer_copyright"
+msgstr "All Rights Reserved"
+
+#: templates/includes/header.html:17
+msgid "nav_home"
+msgstr "Home"
+
+#: templates/includes/header.html:18
+msgid "nav_about"
+msgstr "About"

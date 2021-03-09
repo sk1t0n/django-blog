@@ -1,0 +1,38 @@
+{% load i18n utils %}
+
+<footer class="footer">
+  <div class="container">
+    <div class="columns is-multiline">
+      <div class="column is-4-desktop is-12-touch">
+        <h4 class="recent_posts">{% translate 'recent_posts' %}</h4>
+        <a href="#">How to Sort a Pandas DataFrame by Date</a>
+        <a href="#">Python: Check if Array/List Contains Element/Value</a>
+        <a href="#">How to Format Number as Currency String in JavaScript</a>
+      </div>
+      <div class="column is-4-desktop is-12-touch">
+        <h4>{% filter title %}{% translate 'tags' %}{% endfilter %}</h4>
+        <button class="button is-light is-outlined is-small">Outlined</button>
+        <button class="button is-light is-outlined is-small">Outlined</button>
+        <button class="button is-light is-outlined is-small">Outlined</button>
+        <button class="button is-light is-outlined is-small">Outlined</button>
+        <button class="button is-light is-outlined is-small">Outlined</button>
+        <button class="button is-light is-outlined is-small">Outlined</button>
+        <button class="button is-light is-outlined is-small">Outlined</button>
+        <button class="button is-light is-outlined is-small">Outlined</button>
+      </div>
+      <div class="column is-4-desktop is-12-touch">
+        <h4>{% translate 'contact_me' %}</h4>
+        <a href="mailto:agrabovsky2020@gmail.com" class="icon">
+          <i class="fas fa-lg fa-envelope"></i>
+        </a>
+        <a href="https://github.com/sk1t0n" class="icon">
+          <i class="fab fa-lg fa-github"></i>
+        </a>
+        <a href="https://gitlab.com/woolster" class="icon">
+          <i class="fab fa-lg fa-gitlab"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">&copy; {% current_year %}, {% translate 'site_title' %}. {% translate 'footer_copyright' %}.</div>
+</footer>

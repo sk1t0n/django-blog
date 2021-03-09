@@ -1,0 +1,56 @@
+aside {
+  // background-color: silver;
+  padding-top: 0px !important;
+
+  .widget {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    margin-bottom: 40px;
+
+    &:last-child {
+      margin-bottom: 10px;
+    }
+
+    h4 {
+      font-size: 1.1em;
+      font-weight: 600;
+      margin-bottom: 20px;
+      color: #111 !important;
+    }
+
+    .post {
+      margin-bottom: 20px;
+      display: flex;
+      color: #111;
+
+      figure {
+        margin-right: 10px;
+
+        img {
+          min-width: 55px;
+          max-width: 80px;
+        }
+      }
+
+      h5 {
+        font-size: 0.9em;
+        font-weight: 500 !important;
+      }
+
+      small {
+        font-size: 0.8em;
+        color: rgba(0, 0, 0, 0.6);
+      }
+
+      &:last-child {
+        margin-bottom: 0px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  aside .widget:first-child {
+    margin-top: 40px;
+  }
+}

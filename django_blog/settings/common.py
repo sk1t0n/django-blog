@@ -116,13 +116,12 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
-# Heroku
+# WhiteNoise
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'static'
 STATICFILES_DIRS = [
-    BASE_DIR / 'setup_admin_tools',
+    BASE_DIR / 'staticfiles',
 ]
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Cloudinary
 MEDIA_URL = '/media/'
@@ -135,5 +134,5 @@ CLOUDINARY_STORAGE = {
 
 
 # django-admin-tools
-ADMIN_TOOLS_MENU = 'setup_admin_tools.menu.CustomMenu'
+ADMIN_TOOLS_MENU = 'django_blog.menu_admin_tools.CustomMenu'
 ADMIN_TOOLS_THEMING_CSS = 'css/admin_theming.css'

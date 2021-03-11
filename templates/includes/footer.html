@@ -5,20 +5,15 @@
     <div class="columns is-multiline">
       <div class="column is-4-desktop is-12-touch">
         <h4 class="recent_posts">{% translate 'recent_posts' %}</h4>
-        <a href="#">How to Sort a Pandas DataFrame by Date</a>
-        <a href="#">Python: Check if Array/List Contains Element/Value</a>
-        <a href="#">How to Format Number as Currency String in JavaScript</a>
+        {% for post in recent_posts %}
+        <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+        {% endfor %}
       </div>
       <div class="column is-4-desktop is-12-touch">
         <h4>{% filter title %}{% translate 'tags' %}{% endfilter %}</h4>
-        <button class="button is-light is-outlined is-small">Outlined</button>
-        <button class="button is-light is-outlined is-small">Outlined</button>
-        <button class="button is-light is-outlined is-small">Outlined</button>
-        <button class="button is-light is-outlined is-small">Outlined</button>
-        <button class="button is-light is-outlined is-small">Outlined</button>
-        <button class="button is-light is-outlined is-small">Outlined</button>
-        <button class="button is-light is-outlined is-small">Outlined</button>
-        <button class="button is-light is-outlined is-small">Outlined</button>
+        {% for tag in all_tags %}
+        <a href="{{ tag.get_absolute_url }}" class="button is-light is-outlined is-small">{{ tag.name }}</a>
+        {% endfor %}
       </div>
       <div class="column is-4-desktop is-12-touch">
         <h4>{% translate 'contact_me' %}</h4>

@@ -4,6 +4,7 @@ from time import time
 from django.contrib.auth.models import User
 from django.db import models
 from django.db.models.signals import pre_save
+from django.shortcuts import reverse
 from django.template.defaultfilters import slugify
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
@@ -78,6 +79,9 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return reverse('post-detail', kwargs={'slug': self.slug})
+
     class Meta:
         ordering = ['-published_date', '-created_date', 'title']
         verbose_name = _('post')
@@ -100,6 +104,9 @@ class Tag(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('tag-post-list', kwargs={'name': self.name})
 
     class Meta:
         ordering = ['name']

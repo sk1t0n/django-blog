@@ -1,9 +1,7 @@
 aside {
-  // background-color: silver;
   padding-top: 0px !important;
 
   .widget {
-    border: 1px solid rgba(0, 0, 0, 0.2);
     padding: 10px;
     margin-bottom: 40px;
 
@@ -42,6 +40,16 @@ aside {
 
       &:last-child {
         margin-bottom: 0px;
+      }
+    }
+
+    .tag {
+      background-color: #999;
+      color: #fff;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: none;
       }
     }
   }

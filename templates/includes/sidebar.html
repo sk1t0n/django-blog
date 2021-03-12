@@ -14,4 +14,11 @@
     </a>
     {% endfor %}
   </div>
+
+  <div class="widget">
+    <h4>{% filter title %}{% translate 'tags' %}{% endfilter %}</h4>
+    {% for tag in all_tags %}
+    <a href="{{ tag.get_absolute_url }}" class="tag">{{ tag.name }}</a>
+    {% endfor %}
+  </div>
 </div>

@@ -15,7 +15,7 @@ class PostListView(MixinFillContext, ListView):
         name = self.kwargs['name']
         tag = Tag.objects.filter(name__iexact=name).first()
         if tag:
-            return Post.objects.filter(tags__in=[tag.id])
+            return Post.objects.filter(tags__in=[tag.id], is_published=True)
         raise Http404
 
     def get_context_data(self, **kwargs):

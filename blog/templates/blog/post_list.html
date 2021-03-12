@@ -1,31 +1,5 @@
 {% extends 'base.html' %}
-{% load utils %}
 
 {% block content %}
-  {% for post in posts %}
-    <article class="post">
-      <div class="columns">
-        <div class="column is-4-tablet">
-          <a class="post-img" href="{{ post.get_absolute_url }}">
-            <img src="{% post_image post.image %}">
-          </a>
-        </div>
-        <div class="column is-8-tablet">
-          <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
-          <p>{{ post.excerpt }}</p>
-          <div class="additional_info">
-            {% if post.tags.all %}
-            <a href="{{ post.tags.all.first.get_absolute_url }}" class="tag is-warning">{{ post.tags.all.first }}</a>
-            {% endif %}
-            <div class="pub_date">{{ post.published_date | date }}</div>
-            <div class="slash">/</div>
-            <div class="author">{{ post.author }}</div>
-            {% if post.views %}
-            <div class="slash">/</div>
-            <div class="icon views"><i class="far fa-eye"></i>&nbsp;{{ post.views }}</div>
-            {% endif %}
-        </div>
-      </div>
-    </article>
-  {% endfor %}
+{% include 'blog/includes/post_list.html' %}
 {% endblock %}

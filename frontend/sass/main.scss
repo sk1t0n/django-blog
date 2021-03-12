@@ -1,4 +1,11 @@
 main {
+  .tag-header {
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+
   .columns {
     margin-top: 0px;
     margin-bottom: 0px !important;

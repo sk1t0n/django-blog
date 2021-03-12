@@ -1,17 +1,14 @@
-{% load static i18n %}
+{% load static i18n utils %}
 
 <div>
   <div class="widget">
     <h4>{% translate 'recent_posts' %}</h4>
     {% for post in recent_posts %}
     <a href="{{ post.get_absolute_url }}" class="post">
-      {% if post.image %}
-      <figure class="image">
-        <img src="{{ post.image }}">
-      </figure>
-      {% endif %}
+      <img src="{% post_image post.image %}">
       <div>
-        <h5>{{ post.title | truncatewords:6 }}</h5>
+        <h5 class="is-hidden-touch">{{ post.title | truncatewords:5 }}</h5>
+        <h5 class="is-hidden-desktop">{{ post.title }}</h5>
         <small>{{ post.published_date | date }}</small>
       </div>
     </a>

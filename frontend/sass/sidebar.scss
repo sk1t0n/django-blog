@@ -23,13 +23,11 @@ aside {
       display: flex;
       color: #111;
 
-      figure {
+      img {
+        width: 55px;
+        height: 45px;
         margin-right: 10px;
-
-        img {
-          min-width: 55px;
-          max-width: 80px;
-        }
+        object-fit: cover;
       }
 
       h5 {

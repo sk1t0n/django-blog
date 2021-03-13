@@ -3,10 +3,10 @@ from django.http import Http404
 
 from ..config import POSTS_PER_PAGE
 from ..models import Post, Tag
-from .utils import MixinFillContext
+from .utils import FillContextMixin
 
 
-class PostListView(MixinFillContext, ListView):
+class PostListView(FillContextMixin, ListView):
     template_name = 'blog/tag_post_list.html'
     context_object_name = 'posts'
     paginate_by = POSTS_PER_PAGE

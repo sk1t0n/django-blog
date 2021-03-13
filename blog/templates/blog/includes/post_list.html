@@ -18,9 +18,11 @@
           <div class="pub_date">{{ post.published_date | date }}</div>
           <div class="slash">/</div>
           <div class="author">{{ post.author }}</div>
+          <div class="slash">/</div>
+          <div class="icon"><i class="far fa-clock"></i>{{ post.read_time }}</div>
           {% if post.views %}
           <div class="slash">/</div>
-          <div class="icon views"><i class="far fa-eye"></i>&nbsp;{{ post.views }}</div>
+          <div class="icon"><i class="far fa-eye"></i>{{ post.views }}</div>
           {% endif %}
         </div>
       </div>

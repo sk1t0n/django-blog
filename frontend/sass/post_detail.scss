@@ -23,15 +23,16 @@ main {
       display: flex;
       justify-content: center;
 
-      .pub_date, .author, .views {
+      .pub_date, .author, .icon {
         font-size: 0.8em;
         color: #999;
       }
-  
-      .views {
+
+      .icon {
         height: auto;
         i {
-          font-size: 0.6em;
+          font-size: 10px;
+          margin-right: 6px;
         }
       }
   

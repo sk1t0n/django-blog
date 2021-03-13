@@ -1,0 +1,109 @@
+main {
+  article.post-detail {
+    text-align: center;
+
+    .tag {
+      height: 18px;
+      text-transform: uppercase;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    h2 {
+      margin: 20px 0px;
+      font-size: 1.8em;
+      font-weight: 500;
+      line-height: 1.1em;
+      color: #111;
+    }
+
+    .additional_info {
+      display: flex;
+      justify-content: center;
+
+      .pub_date, .author, .views {
+        font-size: 0.8em;
+        color: #999;
+      }
+  
+      .views {
+        height: auto;
+        i {
+          font-size: 0.6em;
+        }
+      }
+  
+      .slash {
+        font-size: 0.7em;
+        color: #999;
+        margin: 0px 15px;
+      }
+    }
+
+    img {
+      margin-top: 2.2em;
+      margin-bottom: 2.2em;
+    }
+
+    .post-content {
+      text-align: left;
+      color: #111;
+      padding: 0 5%;
+    }
+
+    .tags {
+      margin: 20px 0;
+      display: block;
+      text-align: left;
+
+      span {
+        color: #fff;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+        background: rgba(0, 0, 0, 0) linear-gradient(to right, #0091e5 0px, #00b7e5 100%) repeat scroll 0 0;
+        padding: 2px 10px;
+        margin-right: 10px;
+        border-radius: 3px;
+      }
+
+      a {
+        line-height: 30px;
+        padding-left: 5px;
+        padding-right: 5px;
+        color: #999 !important;
+        font-size: 11px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+
+        &:hover {
+          color: $warning !important;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  main article.post-detail {
+    h2 {
+      font-size: 1.6em;
+    }
+
+    .tags {
+      margin-bottom: 0px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  main article.post-detail {
+    h2 {
+      font-size: 1.4em;
+    }
+
+    .tags {
+      text-align: center;
+    }
+  }
+}

@@ -7,7 +7,11 @@ from django.db.models.signals import pre_save
 from django.shortcuts import reverse
 from django.template.defaultfilters import slugify
 from django.utils import timezone
+from django.utils.html import strip_tags
+from django.utils.text import Truncator
 from django.utils.translation import gettext_lazy as _
+
+from .utils import get_read_time
 
 
 class Category(models.Model):
@@ -88,12 +92,22 @@ class Post(models.Model):
         verbose_name_plural = _('posts')
 
     def save(self, *args, **kwargs):
+        # fill published_date
         if self.pk and self.is_published:
             post = Post.objects.filter(pk=self.pk).first()
             if post and not post.published_date:
                 self.published_date = timezone.localtime()
         elif self.is_published:
             self.published_date = timezone.localtime()
+
+        # fill excerpt
+        if self.content:
+            excerpt = Truncator(strip_tags(self.content)).words(45)
+            self.excerpt = excerpt if len(excerpt) < 500 else excerpt[:490] + '...'  # noqa
+
+        # fill read_time
+        read_time = get_read_time(self.content)
+        self.read_time = read_time
         super(Post, self).save(*args, **kwargs)
 
 

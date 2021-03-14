@@ -44,6 +44,8 @@ aside {
     }
 
     .tag {
+      margin-right: 5px;
+      margin-bottom: 5px;
       background-color: #999;
       color: #fff;
       text-transform: uppercase;
@@ -56,7 +58,8 @@ aside {
 }
 
 @media screen and (max-width: 991px) {
-  aside .widget:first-child {
-    margin-top: 40px;
+  aside {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
   }
 }

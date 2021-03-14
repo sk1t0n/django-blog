@@ -9,10 +9,6 @@ main {
   article.post {
     margin-bottom: 40px;
 
-    &:last-child {
-      margin-bottom: 0px;
-    }
-
     .post-img {
       display: inline-block;
       overflow: hidden;

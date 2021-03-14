@@ -7,4 +7,22 @@ main {
       padding-top: 0px;
     }
   }
+
+  .pagination {
+    margin-bottom: 40px;
+
+    .pagination-link, .pagination-previous, .pagination-next {
+      border-radius: 0px;
+
+      &:hover {
+        background: rgba(0, 0, 0, 0) linear-gradient(to right, #0091e5 0px, #00b7e5 100%) repeat scroll 0 0;
+        color: #fff;
+        border-color: #3273dc;  
+      }
+    }
+
+    .is-current {
+      background: rgba(0, 0, 0, 0) linear-gradient(to right, #0091e5 0px, #00b7e5 100%) repeat scroll 0 0;
+    }
+  }
 }

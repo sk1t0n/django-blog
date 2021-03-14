@@ -1,0 +1,48 @@
+{% if is_paginated %}
+<nav class="pagination is-centered" role="navigation" aria-label="pagination">
+  <ul class="pagination-list">
+  {% if page_obj.has_previous %}
+    <li>
+      <a class="pagination-previous" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+        <span aria-hidden="true">&lt;</span>
+      </a>
+    </li>
+  {% else %}
+    <li>
+      <a disabled class="pagination-previous" tabindex="-1" aria-disabled="true">
+        <span aria-hidden="true">&lt;</span>
+      </a>
+    </li>
+  {% endif %}
+
+  {% for number in page_obj.paginator.page_range %}
+    {% if number == page_obj.number %}
+    <li aria-current="page">
+      <a class="pagination-link is-current" aria-label="Page {{ number }}" aria-current="page">
+        {{ number }}
+        <span class="sr-only">(current)</span>
+      </a>
+    </li>
+    {% else %}
+    <li>
+      <a class="pagination-link" href="?page={{ number }}" aria-label="Goto page {{ number }}">{{ number }}</a>
+    </li>
+    {% endif %}
+  {% endfor %}
+
+  {% if page_obj.has_next %}
+    <li>
+      <a class="pagination-next" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+        <span aria-hidden="true">&gt;</span>
+      </a>
+    </li>
+  {% else %}
+    <li>
+      <a disabled class="pagination-next" tabindex="-1" aria-disabled="true">
+        <span aria-hidden="true">&gt;</span>
+      </a>
+    </li>
+  {% endif %}
+  </ul>
+</nav>
+{% endif %}

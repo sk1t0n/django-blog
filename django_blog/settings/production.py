@@ -27,4 +27,4 @@ DATABASES = {
 
 # WhiteNoise
 WHITENOISE_MAX_AGE = 3600  # Time (in seconds) for which browsers and proxies should cache non-versioned files  # noqa
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'

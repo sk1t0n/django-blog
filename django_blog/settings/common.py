@@ -114,6 +114,10 @@ USE_L10N = True
 USE_TZ = True
 
 
+# Heroku logs
+DEBUG_PROPAGATE_EXCEPTIONS = True
+
+
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 

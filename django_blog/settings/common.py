@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'debug_toolbar',
     'cloudinary_storage',
     'cloudinary',
+    'martor'
 ]
 
 MIDDLEWARE = [

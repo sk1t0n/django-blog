@@ -1,6 +1,8 @@
+from django.db import models
 from django.contrib import admin
 from django.contrib.admin.views.main import ChangeList
 from django.utils.translation import gettext as _, get_language
+from martor.widgets import AdminMartorWidget
 
 from .models import Post, Category, Tag
 
@@ -49,6 +51,9 @@ class PostAdmin(admin.ModelAdmin):
     ]
     filter_horizontal = ['tags']
     prepopulated_fields = {'slug': ['title']}
+    formfield_overrides = {
+        models.TextField: {'widget': AdminMartorWidget}
+    }
 
     def get_changelist(self, request, **kwargs):
         return CustomPostChangeList

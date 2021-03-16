@@ -1,4 +1,4 @@
-{% load utils %}
+{% load utils martortags %}
 
 {% for post in posts %}
   <article class="post">
@@ -10,7 +10,7 @@
       </div>
       <div class="column is-8-tablet">
         <h4><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h4>
-        <p>{{ post.excerpt }}</p>
+        <p>{{ post.excerpt|safe_markdown }}</p>
         <div class="additional_info">
           {% if post.tags.all %}
           <a href="{{ post.tags.all.first.get_absolute_url }}" class="tag is-warning">{{ post.tags.all.first }}</a>

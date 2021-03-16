@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load utils i18n %}
+{% load utils i18n martortags %}
 
 {% block content %}
 <article class="post-detail">
@@ -18,9 +18,9 @@
     <div class="icon"><i class="far fa-eye"></i>{{ post.views }}</div>
     {% endif %}
   </div>
-  <img src="{% post_image post.image %}">
+  <img class="post__main-img" src="{% post_image post.image %}">
   <div class="post-content">
-    {{ post.content|safe }}
+    {{ post.content|safe_markdown }}
   </div>
   {% if post.tags.all %}
   <div class="tags">

@@ -17,6 +17,7 @@ whitenoise = {extras = ["brotli"], version = "*"}
 pillow = "*"
 cloudinary = "*"
 django-cloudinary-storage = "*"
+martor = "*"
 
 [requires]
 python_version = "3.8"

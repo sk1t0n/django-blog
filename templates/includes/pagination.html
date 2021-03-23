@@ -3,7 +3,7 @@
   <ul class="pagination-list">
   {% if page_obj.has_previous %}
     <li>
-      <a class="pagination-previous" href="?page={{ page_obj.previous_page_number }}" aria-label="Previous">
+      <a class="pagination-previous" href="?page={{ page_obj.previous_page_number }}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}" aria-label="Previous">
         <span aria-hidden="true">&lt;</span>
       </a>
     </li>
@@ -25,14 +25,14 @@
     </li>
     {% else %}
     <li>
-      <a class="pagination-link" href="?page={{ number }}" aria-label="Goto page {{ number }}">{{ number }}</a>
+      <a class="pagination-link" href="?page={{ number }}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}" aria-label="Goto page {{ number }}">{{ number }}</a>
     </li>
     {% endif %}
   {% endfor %}
 
   {% if page_obj.has_next %}
     <li>
-      <a class="pagination-next" href="?page={{ page_obj.next_page_number }}" aria-label="Next">
+      <a class="pagination-next" href="?page={{ page_obj.next_page_number }}{% if request.GET.search %}&search={{ request.GET.search }}{% endif %}" aria-label="Next">
         <span aria-hidden="true">&gt;</span>
       </a>
     </li>

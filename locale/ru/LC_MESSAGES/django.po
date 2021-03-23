@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-08 17:40+0300\n"
+"POT-Creation-Date: 2021-03-23 13:21+0300\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,20 +20,20 @@ msgstr ""
 "%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
 "%100>=11 && n%100<=14)? 2 : 3);\n"
 
-#: blog/admin.py:41 blog/admin.py:72
+#: blog/admin.py:43 blog/admin.py:77
 msgid "admin_main_fields"
 msgstr "Основные поля"
 
-#: blog/admin.py:46 blog/admin.py:73
+#: blog/admin.py:48 blog/admin.py:78
 msgid "admin_additional_fields"
 msgstr "Дополнительные поля"
 
-#: blog/admin.py:95 templates/base.html:8 templates/includes/footer.html:17
+#: blog/admin.py:100 templates/base.html:8 templates/includes/footer.html:32
 #: templates/includes/header.html:6
 msgid "site_title"
 msgstr "Блог Антона Грабовского"
 
-#: blog/admin.py:96
+#: blog/admin.py:101
 msgid "admin_site_header"
 msgstr "Блог Антона Грабовского"
 
@@ -41,93 +41,98 @@ msgstr "Блог Антона Грабовского"
 msgid "blog"
 msgstr "Блог"
 
-#: blog/models.py:14 blog/models.py:98
+#: blog/models.py:19 blog/models.py:116
 msgid "name"
 msgstr "имя"
 
-#: blog/models.py:18 blog/models.py:38
+#: blog/models.py:23 blog/models.py:43
 msgid "slug"
 msgstr "слаг"
 
-#: blog/models.py:18 blog/models.py:38
+#: blog/models.py:23 blog/models.py:43
 msgid "slug_help_text"
 msgstr "Часть URL-адреса, которая содержит заголовок страницы"
 
-#: blog/models.py:22
+#: blog/models.py:27
 msgid "parent"
 msgstr "родитель"
 
-#: blog/models.py:30 blog/models.py:72
+#: blog/models.py:35 blog/models.py:77
 msgid "category"
 msgstr "категория"
 
-#: blog/models.py:31
+#: blog/models.py:36
 msgid "categories"
 msgstr "категории"
 
-#: blog/models.py:35
+#: blog/models.py:40
 msgid "title"
 msgstr "заголовок"
 
-#: blog/models.py:40
+#: blog/models.py:45
 msgid "content"
 msgstr "содержание"
 
-#: blog/models.py:43
+#: blog/models.py:48
 msgid "excerpt"
 msgstr "краткое содержание"
 
-#: blog/models.py:43
+#: blog/models.py:48
 msgid "excerpt_help_text"
 msgstr "Краткое содержание более длинной статьи"
 
-#: blog/models.py:46
+#: blog/models.py:51
 msgid "number_of_views"
 msgstr "количество просмотров"
 
-#: blog/models.py:49
+#: blog/models.py:54
 msgid "read_time"
 msgstr "время чтения"
 
-#: blog/models.py:52
+#: blog/models.py:57
 msgid "created_date"
 msgstr "дата создания"
 
-#: blog/models.py:55
+#: blog/models.py:60
 msgid "published"
 msgstr "опубликовано"
 
-#: blog/models.py:58
+#: blog/models.py:63
 msgid "published_date"
 msgstr "дата публикации"
 
-#: blog/models.py:61
+#: blog/models.py:66
 msgid "modified_date"
 msgstr "дата изменения"
 
-#: blog/models.py:65
+#: blog/models.py:70
 msgid "image"
 msgstr "изображение"
 
-#: blog/models.py:68
+#: blog/models.py:73
 msgid "author"
 msgstr "автор"
 
-#: blog/models.py:75 blog/models.py:107 templates/includes/footer.html:10
+#: blog/models.py:80 blog/models.py:128 blog/templates/blog/post_detail.html:27
+#: templates/includes/footer.html:13 templates/includes/sidebar.html:19
 msgid "tags"
 msgstr "тэги"
 
-#: blog/models.py:83
+#: blog/models.py:91
 msgid "post"
 msgstr "статья"
 
-#: blog/models.py:84
+#: blog/models.py:92
 msgid "posts"
 msgstr "статьи"
 
-#: blog/models.py:106
+#: blog/models.py:127
 msgid "tag"
 msgstr "тэг"
+
+#: blog/templates/blog/includes/post_list.html:34
+msgid "posts_not_found"
+msgstr "Статьи не найдены"
 
 #: django_blog/menu_admin_tools.py:28
 msgid "Dashboard"
@@ -159,15 +164,15 @@ msgstr "блог, Антон, Грабовский"
 msgid "site_author"
 msgstr "Антон Грабовский"
 
-#: templates/includes/footer.html:7
+#: templates/includes/footer.html:7 templates/includes/sidebar.html:5
 msgid "recent_posts"
 msgstr "Последние статьи"
 
-#: templates/includes/footer.html:13
+#: templates/includes/footer.html:19
 msgid "contact_me"
 msgstr "Мои контакты"
 
-#: templates/includes/footer.html:17
+#: templates/includes/footer.html:32
 msgid "footer_copyright"
 msgstr "Все права защищены"
 
@@ -178,3 +183,7 @@ msgstr "Главная"
 #: templates/includes/header.html:18
 msgid "nav_about"
 msgstr "Обо мне"
+
+#: templates/includes/header.html:24
+msgid "search"
+msgstr "Поиск"

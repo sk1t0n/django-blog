@@ -1,6 +1,7 @@
-{% load utils martortags %}
+{% load utils martortags i18n %}
 
-{% for post in posts %}
+{% if posts %}
+  {% for post in posts %}
   <article class="post">
     <div class="columns">
       <div class="column is-4-tablet">
@@ -28,6 +29,9 @@
       </div>
     </div>
   </article>
-{% endfor %}
+  {% endfor %}
+{% else %}
+<p>{% translate 'posts_not_found' %}</p>
+{% endif %}
 
 {% include 'includes/pagination.html' %}

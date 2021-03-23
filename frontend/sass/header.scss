@@ -41,6 +41,28 @@
         }
       }
     }
+
+    // Form Search
+    .form__search {
+      padding-top: 5px;
+      padding-right: 1.2em;
+
+      input {
+        border-radius: 20px;
+        background-color: transparent;
+        border-color: #fff;
+        color: #fff;
+
+        &::placeholder {
+          color: #fff;
+          opacity: 0.7;
+        }
+      }
+
+      .icon {
+        color: #fff !important;
+      }
+    }
   }
 }
 
@@ -50,8 +72,13 @@
   }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .header .navbar-menu {
     margin-left: 10px;
+  }
+  .form__search {
+    padding-left: 0.6em;
+    padding-right: 1.5em !important;
+    margin-bottom: 8px;
   }
 }

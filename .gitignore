@@ -4,3 +4,5 @@ __pycache__/
 node_modules/
 *.log
 static/
+staticfiles/app.css
+staticfiles/app.js
